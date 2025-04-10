@@ -1,0 +1,11 @@
+streamlit
+python-dotenv
+langchain
+langchain-google-genai
+langchain-community
+langchain-groq
+langchain-cohere
+langchain-together
+langchain-huggingface
+langchain-cerebras
+python-time 

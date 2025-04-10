@@ -1,0 +1,318 @@
+/* CSS Variables */
+:root {
+    --primary-color: #FF4B4B;
+    --primary-light: #FF7676;
+    --primary-dark: #CC3B3B;
+    --text-color: #FFFFFF;
+    --dark-bg: #1E1E1E;
+    --darker-bg: #141414;
+    --hover-bg: #2D2D2D;
+    --border-color: #333333;
+    --success-color: #4CAF50;
+    --warning-color: #FFC107;
+    --error-color: #FF5252;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+.stApp {
+    background-color: var(--darker-bg);
+}
+
+/* Sidebar Base Styling */
+[data-testid="stSidebar"] {
+    background-color: var(--dark-bg);
+    border-right: 1px solid var(--border-color);
+}
+
+[data-testid="stSidebar"] > div {
+    padding: 0 !important;
+}
+
+.sidebar-header {
+    padding: 2rem 1rem;
+}
+
+/* Configuration Header */
+.config-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* API Key Section */
+.api-key-section {
+    background: var(--darker-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.api-key-section h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.provider-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.provider-status {
+    background: var(--dark-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.provider-status:hover {
+    transform: translateX(5px);
+    background: var(--hover-bg);
+    border-color: var(--primary-color);
+}
+
+/* Select Box Styling */
+.stSelectbox {
+    margin-top: 1rem;
+}
+
+.stSelectbox > div {
+    margin-top: 0.5rem;
+}
+
+.stSelectbox > div > div {
+    background-color: var(--darker-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+    color: var(--text-color) !important;
+    transition: var(--transition) !important;
+}
+
+.stSelectbox > div > div:hover {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 1px var(--primary-color) !important;
+}
+
+/* Text Area Styling */
+.stTextArea textarea {
+    background-color: var(--dark-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+    color: var(--text-color) !important;
+    font-size: 1rem !important;
+    padding: 1rem !important;
+    transition: var(--transition) !important;
+}
+
+.stTextArea textarea:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 1px var(--primary-color) !important;
+}
+
+/* Button Styling */
+.stButton > button {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light)) !important;
+    border: none !important;
+    border-radius: var(--border-radius) !important;
+    color: var(--text-color) !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1.5rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    transition: var(--transition) !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 12px rgba(255, 75, 75, 0.2) !important;
+}
+
+.stButton > button:active {
+    transform: translateY(0) !important;
+}
+
+/* Header Styling */
+.app-header {
+    background: var(--dark-bg);
+    border-radius: var(--border-radius);
+    margin: -1rem -1rem 2rem -1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* Try it out section */
+.try-it-out {
+    background: var(--dark-bg);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+/* Response Container */
+.response-container {
+    background: var(--dark-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Metrics Styling */
+[data-testid="stMetricValue"] {
+    color: var(--primary-color) !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--text-color) !important;
+    font-size: 1rem !important;
+    opacity: 0.8 !important;
+}
+
+/* Code Block Styling */
+.stCodeBlock {
+    background: var(--darker-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+/* Footer Styling */
+.footer {
+    background: var(--dark-bg);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+.footer p {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.footer code {
+    background: var(--hover-bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Loading Spinner */
+.stSpinner > div {
+    border-color: var(--primary-color) transparent transparent !important;
+}
+
+/* Error Messages */
+.stAlert {
+    background: var(--dark-bg) !important;
+    border: 1px solid var(--error-color) !important;
+    color: var(--error-color) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+/* Warning Messages */
+.stWarning {
+    background: var(--dark-bg) !important;
+    border: 1px solid var(--warning-color) !important;
+    color: var(--warning-color) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+/* Help Text */
+.stTextArea [data-baseweb="help"] {
+    color: var(--text-color) !important;
+    opacity: 0.7;
+}
+
+/* API Key Status */
+[data-testid="stMarkdown"] h3 {
+    color: var(--text-color) !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 1rem !important;
+}
+
+[data-testid="stMarkdown"] div {
+    padding: 0.5rem !important;
+    margin: 0.25rem 0 !important;
+    border-radius: var(--border-radius) !important;
+    background: var(--darker-bg) !important;
+    transition: var(--transition) !important;
+}
+
+[data-testid="stMarkdown"] div:hover {
+    transform: translateX(5px) !important;
+}
+
+[data-testid="stHorizontalBlock"] {
+    gap: 2rem !important;
+}
+
+/* Empty containers */
+div:empty {
+    display: none !important;
+}
+
+/* Container Styling */
+[data-testid="stVerticalBlock"] > div:empty {
+    display: none !important;
+}
+
+/* Metrics Container */
+[data-testid="metric-container"] {
+    background: var(--darker-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    transition: var(--transition);
+}
+
+[data-testid="metric-container"]:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Remove unwanted spaces */
+[data-testid="stSidebarNav"] {
+    display: none !important;
+} 
