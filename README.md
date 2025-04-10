@@ -2,6 +2,8 @@
 
 A Streamlit application to compare inference speeds across different LLM providers.
 
+link : https://llm-inference-akash.streamlit.app/
+
 ## Features
 
 - Compare inference speeds across multiple providers:
